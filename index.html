@@ -52,7 +52,8 @@
           getStarted: 'Nouvelle Conversation',
           inputPlaceholder: 'Tapez votre question...',
         }
-      }
+      },
+      containerId: 'n8n-chat-widget-container'
     });
 	  </script>
       <script>
@@ -486,6 +487,25 @@
       <link rel="prefetch" fetchpriority="low" as="image" href="https://cdn.shopify.com/s/files/1/0882/1512/6365/files/volet_png_checkout_x320.png?v=1729178969" crossorigin="">
       <link rel="stylesheet" href="./files/css" media="all">
       <link href="./files/om.base.d2e3fe5626a1b23f1f27.css" rel="stylesheet" type="text/css">
+      <style>
+        /* Custom styling for n8n chat container */
+        #n8n-chat-widget-container {
+          position: fixed !important;
+          z-index: 9999 !important;
+          right: 20px !important;
+          bottom: 20px !important;
+          max-width: 400px !important;
+          width: calc(100% - 40px) !important;
+          margin: 0 !important;
+        }
+
+        /* Ensure chat doesn't affect page layout */
+        body {
+          overflow-x: hidden !important;
+          position: relative !important;
+          width: 100% !important;
+        }
+      </style>
    </head>
    <body class="gradient" cz-shortcut-listen="true">
       <a class="skip-to-content-link button visually-hidden" href="https://volet-dumont.fr/?srsltid=AfmBOoqayzPtLhn6-9YoYZBQNSeD5WQrqiXt3Wi9Gps3pplK1lpyOvRj#MainContent">
@@ -972,7 +992,7 @@
          <link href="./files/component-list-social.css" rel="stylesheet" type="text/css" media="all">
          <div class="utility-bar color-scheme-5 gradient utility-bar--bottom-border">
             <div class="page-width utility-bar__grid">
-               <slideshow-component class="announcement-bar" role="region" aria-roledescription="Carrousel" aria-label="Barre d’annonces">
+               <slideshow-component class="announcement-bar" role="region" aria-roledescription="Carrousel" aria-label="Barre d'annonces">
                   <div class="announcement-bar-slider slider-buttons">
                      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="Annonce précédente" aria-controls="Slider-sections--23230622040413__announcement-bar">
                         <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
@@ -1639,7 +1659,7 @@
                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                                     </div>
                                     <p><strong>Parfait de bout en bout</strong></p>
-                                    <p>Les volets sont arrivés en parfait état, et le montage s’est fait sans problème. Très satisfait de cette commande.</p>
+                                    <p>Les volets sont arrivés en parfait état, et le montage s'est fait sans problème. Très satisfait de cette commande.</p>
                                  </div>
                               </div>
                            </div>
@@ -1651,7 +1671,7 @@
                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
                                     </div>
                                     <p><strong>Service client remarquable</strong></p>
-                                    <p>Le service client m’a bien conseillé pour la commande, et les volets sont conformes à mes attentes. Merci à toute l'équipe !</p>
+                                    <p>Le service client m'a bien conseillé pour la commande, et les volets sont conformes à mes attentes. Merci à toute l'équipe !</p>
                                  </div>
                               </div>
                            </div>
@@ -2035,7 +2055,7 @@
                                           </a>
                                        </h3>
                                        <p class="card__caption">
-                                          Découvrez notre gamme d’accessoires Somfy pour une gestion optimale de vos volets...
+                                          Découvrez notre gamme d'accessoires Somfy pour une gestion optimale de vos volets...
                                           <span class="icon-wrap">
                                              &nbsp;
                                              <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
